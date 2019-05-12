@@ -41,6 +41,6 @@ npm run test
 npm run lint
 ```
 
-### Json structure
+### JSON structure
 
 https://i.imgur.com/QsiSz95.jpg
