@@ -43,4 +43,37 @@ npm run lint
 
 ### JSON structure
 
-https://i.imgur.com/QsiSz95.jpg
+```
+games:{
+	gameId:0.1
+	gameId2:0.1
+}
+gameId:{
+	"cars":[{
+		"acceleration":5.6
+		"braking":5.4,
+		"class":"C",
+		"handling":5.8,	
+		"id":3,
+		"launch":6.9,
+		"manufacturer":"Acura",
+		"name":"Acura Integra Type-R",
+		"pi":596,
+		"rarity":"Common",
+		"speed":6.3,
+		"type":"Retro hot hatch",
+		"value":"CR 25,000",
+		"vehicle": "Integra Type-R",
+		"year":2001
+	}],
+	"manufacturers":["Acura"],
+	"metadata":{
+	"id":"gameId",
+	"version":0.1
+	}
+	"types":["Retro hot hatch"]
+}
+gameId2:{
+	...
+}
+```
