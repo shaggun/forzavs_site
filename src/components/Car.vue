@@ -73,7 +73,7 @@ export default {
   methods: {
     addRemoveCompare() {
       if (this.cbState !== "true") {
-        //interaction happens before than property update
+        //interaction happens before property update
         this.$store.commit("ADD_CAR_COMPARE", this.car);
       } else {
         this.$store.commit("REMOVE_CAR_COMPARE", this.car);

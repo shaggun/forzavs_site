@@ -191,62 +191,6 @@ export default {
     },
     resetPagMultiplier() {
       this.SET_PAG_MULTIPLIER(1);
-    },
-    filteringTextSearch() {
-      if (this.filterTextSearch.length > 1) {
-        let val = this.filterTextSearch.toString().toLowerCase();
-        //filtering by text search
-        let filteredResults = this.resultsJson.filter(element => {
-          return element.name.toLowerCase().match(val);
-        });
-        //filtering by criteria
-        if (this.filtering.carClass != "All") {
-          filteredResults = filteredResults.filter(element => {
-            return element.class == this.filtering.carClass;
-          });
-        }
-        if (this.filtering.manufacturer != "All") {
-          filteredResults = filteredResults.filter(element => {
-            return (
-              element.manufacturer.toLowerCase() ==
-              this.filtering.manufacturer.toLowerCase()
-            );
-          });
-        }
-        if (this.filtering.type != "All") {
-          filteredResults = filteredResults.filter(element => {
-            return (
-              element.type.toLowerCase() == this.filtering.type.toLowerCase()
-            );
-          });
-        }
-        this.SET_RESULTS(filteredResults);
-      } else {
-        //there's no search by text but the results might be filtered by criteria
-        let filteredResults = this.resultsJson;
-        if (this.filtering.carClass != "All") {
-          filteredResults = filteredResults.filter(element => {
-            return element.class == this.filtering.carClass;
-          });
-        }
-        if (this.filtering.manufacturer != "All") {
-          filteredResults = filteredResults.filter(element => {
-            return (
-              element.manufacturer.toLowerCase() ==
-              this.filtering.manufacturer.toLowerCase()
-            );
-          });
-        }
-        if (this.filtering.type != "All") {
-          filteredResults = filteredResults.filter(element => {
-            return (
-              element.type.toLowerCase() == this.filtering.type.toLowerCase()
-            );
-          });
-        }
-        this.SET_RESULTS(filteredResults);
-      }
-      this.SET_LOADING_DATA(false);
     }
   },
   filters: {

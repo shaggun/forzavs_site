@@ -93,7 +93,7 @@ export const reloadCars = ({ commit, dispatch, state }) => {
     commit("SET_LOADING_DATA", false);
   }
 };
-
+//This is only used when we're testing locally to use local storage and avoid making requests
 export const loadFromLocalTemp = ({ commit, state }) => {
   const tempLocalGames = JSON.parse(localStorage.getItem("localGames"));
   const tempLocalCarsObject = JSON.parse(
